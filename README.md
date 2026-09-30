@@ -1,26 +1,40 @@
-# analog-2-7-5
+# Design System — Le Corbusier × AnalogJS
 
-This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
+A design system drawn in Figma, coded in AnalogJS — built on the color palette of Le Corbusier.
+
+Implements three accessible Angular ARIA components (Toolbar, MenuBar, Tree) with four interaction states (Default, Hover, Pressed, Disabled) mapped to four Figma button layouts (Default, Primary, Secondary, Tertiary).
+
+## Stack
+
+- **[AnalogJS](https://analogjs.org)** — fullstack Angular meta-framework (Vite + Nitro)
+- **[@angular/aria](https://angular.dev)** — accessible component primitives (Toolbar, MenuBar, Tree)
+- **Figma MCP** — design tokens pulled directly from Figma at implementation time
 
 ## Setup
 
-Run `npm install` to install the application dependencies.
+```bash
+npm install
+npm start        # dev server → http://localhost:5173/
+npm run build    # production build
+npm run test     # unit tests (Vitest)
+```
 
-## Development
+## Color Palette
 
-Run `npm start` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
+| Token | Hex | Figma Layout |
+|---|---|---|
+| `--default` | `#91afa1` | Toolbar widgets |
+| `--primary` | `#b7a392` | MenuBar items |
+| `--secondary` | `#eacfa6` | Dropdown items |
+| `--tertiary` | `#d46c40` | Tree items |
 
-## Build
+Each token has a `-darker` (Hover/Pressed) and `-lighter` (Disabled) variant.
 
-Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
+## Interaction States
 
-## Test
-
-Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
-
-## Community
-
-- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
-- Join the [Discord](https://chat.analogjs.org)
-- Follow us on [Twitter](https://twitter.com/analogjs)
-- Become a [Sponsor](https://github.com/sponsors/brandonroberts)
+| State | Visual |
+|---|---|
+| Default | base fill |
+| Hover | darker fill + drop-shadow |
+| Pressed | darker fill + 2px black border |
+| Disabled | lighter fill + blur(2px) + pointer-events: none |
