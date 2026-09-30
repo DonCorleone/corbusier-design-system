@@ -2,3 +2,41 @@ html, body {
   display: block;
   height: 100%;
 }
+
+/* Dark mode by default */
+:root {
+  color-scheme: dark;
+
+  --bg: #1a1a1a;
+  --bg-surface: #242424;
+  --bg-elevated: #2e2e2e;
+  --border: #3a3a3a;
+  --text: #e8e8e8;
+  --text-muted: #888;
+  --accent: #4fa3e0;
+  --accent-subtle: rgba(79, 163, 224, 0.12);
+  --shadow: rgba(0, 0, 0, 0.4);
+
+  /* Figma button palette */
+  --black: #161515;
+  --white: #fff;
+  --default: #91afa1;
+  --default-darker: #406e58;
+  --default-lighter: #abc17a;
+  --primary: #b7a392;
+  --primary-darker: #b67b66;
+  --primary-lighter: #e2cbb5;
+  --secondary: #eacfa6;
+  --secondary-darker: #b7ac9d;
+  --secondary-lighter: #eadbc0;
+  --tertiary: #d46c40;
+  --tertiary-darker: #943a4d;
+  --tertiary-lighter: #e6cdbf;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
